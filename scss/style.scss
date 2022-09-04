@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import "maps";
+@import "mixins";
+@import "animaciones";
+
+$backcolor: rgb(234, 234, 234);
+
+.header{
+    background: linear-gradient(to right, rgb(212, 228, 238), rgb(26, 130, 194));
+}
+
+.navList{
+    &:hover{
+        color: black !important;
+    }
+}
+
+.titulo{
+    font-style: map-get($titulos, font);
+    font-weight: map-get($titulos, weight);
+    font-size: map-get($titulos, size);
+    font-family: map-get($titulos, family);
+    padding-top: 1rem;
+}
+
+.backgroundSurgery{
+    background-image: url(https://images.pexels.com/photos/4483327/pexels-photo-4483327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    position: relative;
+    @include flex-column-center;
+}
+
+.mainImage{
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+    height: 15rem;
+    animation-name: aparecer;
+    animation-iteration-count: initial;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+
+.footer{
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    color: rgb(8, 6, 16);
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    @include flex-row-center;
+    background-color: rgb(168, 210, 210);
+    & a{
+        text-decoration: none;
+        transition: all infinite;
+        color: rgb(20, 16, 16);
+    }
+}
+
+.backgroundInstrumental{
+    background-color: $backcolor;
+}
+
+.containerNosotros{
+ @include flex-column-center;
+}
+
+.tt{
+    @include flex-column-center;
+    gap: 1rem;
+    margin-top: 1rem;
+    & .Texto{
+        color: black;
+        font-style: normal;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+.imageNosotros{
+    width: 15rem;
+    height: 15rem;
+    padding-bottom: 1rem;
+    animation-name: aparecer;
+    animation-iteration-count: initial;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+
+.boxNosotros{
+    @include flex-row-center;
+}
+
+.cardSection{
+    background-color: aliceblue;
+    @include flex-column-center
+}
+
+.cardValores{
+    background-color: $backcolor;
+    height: auto;
+    width: 200px;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    margin: 1rem 1rem 1rem 1rem;
+    border: 0.1rem solid rgb(24, 21, 21);
+    @include flex-column-center
+}
+.grid__productos{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20px auto;
+    gap: 3rem; 
+    & .galeria{
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+        justify-items: center;
+        align-items: center;
+        & .producto{
+            margin-top: 1rem;
+            margin-left: 0rem;
+            margin-bottom: 1rem;
+            margin-right: 1rem;
+            width: 17rem;
+            height: 23rem;
+            transition: all infinite;
+            &:hover{
+                transform: scale(1.05, 1.05);
+            }
+        }
+    }
+}
+.containerServicios{
+    @include flex-column-center;
+}
+
+.textoServ{
+    & .Texto{
+        font-size: 1.5rem;
+        text-align: center;
+        & .listServ{
+            list-style: square;
+            padding-top: 1.5rem;
+            padding-left: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+    }
+}
+.imageServicio{
+   @extend .imageNosotros;
+}
+.containerCard{
+    @include flex-row-center;
+     .cardForm{
+         background-color: rgb(247, 239, 239);
+         width: 20rem;
+         height: 25rem;
+         border: 0.2rem solid black;
+         padding-left: 3rem;
+         margin: 3rem 0 3rem 0;
+         border-radius: 0.5rem;
+     }
+}
+.carrousel{
+    max-width: 50rem !important;
+    max-height: 50rem !important;
+}
+
+.backgroundCar{
+    background-color: $backcolor;
+}
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    background-color: $backcolor;
+}
+
+
+@media (min-width: 768px){
+    .backgroundSurgery{
+        @include flex-row-center;
+    }
+
+    .titulo{
+        @include titulo-md;
+    }
+    .mainImage{
+        max-width: 120%;
+        height: 25rem;
+    }
+    .containerNosotros{
+        & .tt{
+            @include flex-column-center;
+            padding-left: 1.5rem;
+            padding-top: 1rem;
+            & .Texto{
+                color: black;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        }
+    }
+    .imageNosotros{
+        margin-top: 2rem;
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+        width: 20rem;
+        height: 25rem;
+        padding-top: 1rem;
+    }
+    .cardSection{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-content: center;
+    }
+    .cardValores{
+        max-width: 200px;
+    }
+    .grid__productos{
+       & .galeria{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr) ;
+        & .producto{
+        height: 26rem;    
+        }
+      } 
+    }
+    .imageServicio{
+        width:25rem;
+        height: 20rem;
+    }
+    
+}
+
+@media (min-width: 1100px){
+    .titulo{
+        @include titulo-lg;
+    }
+    .mainImage{
+        height: 30rem;
+    }
+    .imageNosotros{
+        width: 25rem;
+        height: 30rem;
+    }
+    .grid__productos{
+        & .galeria{
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         grid-template-rows: 1fr 1fr 1fr ;
+         & .producto{
+         height: 25rem; 
+        }        
+       }
+    } 
+  
+    .textoServ{
+        & .Texto{
+            font-weight: 500;
+            font-size: 2rem;
+        }
+    }
+    .imageServicio{
+        width:30rem;
+        height: 25rem;
+       
+    }
+    .containerNosotros{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}

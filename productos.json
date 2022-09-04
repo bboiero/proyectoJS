@@ -1,0 +1,93 @@
+[
+    {
+        "id": "1",
+        "instrumental": "aspirador",
+        "precio": "20000",
+        "stock": "5",
+        "disponibilidad": "true",
+        "img": "Imagenes/DQ8.jpg",
+        "btnDisp": "btnDisp1",
+        "btn": "btn1"
+    },
+    {
+        "id": "2",
+        "instrumental": "tubos",
+        "precio": "55000",
+        "stock": "1",
+        "disponibilidad": "true",
+        "img": "Imagenes/DQ4.jpg",
+        "btnDisp": "btnDisp2",
+        "btn": "btn2"
+    },
+    {
+        "id": "3",
+        "instrumental": "kerrison",
+        "precio": "120000",
+        "stock": "10",
+        "disponibilidad": "true",
+        "img": "Imagenes/DQ5.jpg",
+        "btnDisp": "btnDisp3",
+        "btn": "btn3"
+    },
+    {
+        "id": "4",
+        "instrumental": "disector",
+        "precio": "10000",
+        "stock": "40",
+        "disponibilidad": "true",
+        "img": "Imagenes/DQ7.jpg",
+        "btnDisp": "btnDisp4",
+        "btn": "btn4"
+    },
+    {
+        "id": "5",
+        "instrumental": "gubia",
+        "precio": "45000",
+        "stock": "0",
+        "disponibilidad": "false",
+        "img": "Imagenes/DQ1.jpg",
+        "btnDisp": "btnDisp5",
+        "btn": "btn5"
+    },
+    {
+        "id": "6",
+        "instrumental": "cureta",
+        "precio": "15000",
+        "stock": "25",
+        "disponibilidad": "true",
+        "img": "Imagenes/DQ5.jpg",
+        "btnDisp": "btnDisp6",
+        "btn": "btn6"
+    },
+    {
+        "id": "7",
+        "instrumental": "separador",
+        "precio": "7000",
+        "stock": "30",
+        "disponibilidad": "true",
+        "img": "Imagenes/DQ8.jpg",
+        "btnDisp": "btnDisp7",
+        "btn": "btn7"
+    },
+    {
+        "id": "8",
+        "instrumental": "aspirador",
+        "precio": "20000",
+        "stock": "5",
+        "disponibilidad": "true",
+        "img": "Imagenes/DQ3.jpg",
+        "btnDisp": "btnDisp8",
+        "btn": "btn8"
+    },
+    {
+        "id": "9",
+        "instrumental": "espatula",
+        "precio": "17000",
+        "stock": "0",
+        "disponibilidad": "false",
+        "img": "Imagenes/DQ8.jpg",
+        "btnDisp": "btnDisp9",
+        "btn": "btn9"
+    }
+    
+]
